@@ -1,0 +1,5 @@
+namespace pokemonApp;
+
+interface ICapturable {
+    
+}
