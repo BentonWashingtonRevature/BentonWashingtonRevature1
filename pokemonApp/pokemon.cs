@@ -1,5 +1,5 @@
 namespace pokemonApp;
-class Pokemon
+abstract class Pokemon
 {
     //Fields
 
@@ -55,7 +55,7 @@ class Pokemon
     }
 
     //This method is static. It can be called with dot-notation using the name of the class itself.  
-    public static void Sound()
+    public virtual void Sound()
     {
         Console.WriteLine("*pokemon noises*");
     }

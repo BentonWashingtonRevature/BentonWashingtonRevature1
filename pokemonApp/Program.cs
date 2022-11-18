@@ -3,16 +3,27 @@ class Program
 {
     static void Main(string[] args)
     {
+
+
+
+
         Random rand = new Random();
         //Object instantiation
-        Pokemon charmander = new Pokemon("charmander");
-        Pokemon squirtle = new Pokemon("squirtle");
+        Charmander charchar = new Charmander();
+        Bulbasaur bulba = new Bulbasaur();
+        Squirtle turtlebuddy = new Squirtle();
+        Console.WriteLine(charchar);
+        Console.WriteLine(bulba);
+        Console.WriteLine(turtlebuddy);
+
+        // Pokemon charmander = new Pokemon("charmander");
+        // Pokemon squirtle = new Pokemon("squirtle");
 
         //You can use dot notation to access fields and methods available to an object of that class.
-        charmander.type = "fire";
-        charmander.dexNumber = 4;
-        Console.WriteLine(charmander.ToString());
-        Console.WriteLine(squirtle.ToString());
+        // charmander.type = "fire";
+        // charmander.dexNumber = 4;
+        // Console.WriteLine(charmander.ToString());
+        // Console.WriteLine(squirtle.ToString());
 
         //This is how you call an instance method. It "belongs to" objects of that class.
         //You must instantiate an object of that class to call it.

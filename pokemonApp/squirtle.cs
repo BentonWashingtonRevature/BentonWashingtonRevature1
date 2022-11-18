@@ -12,5 +12,10 @@ class Squirtle : Pokemon {
         Console.WriteLine("*squirtle noises*");
     }
 
+    public override string ToString()
+    {
+        return $"My name is {name}, pokedex number {dexNumber}. I am a {type} type pokemon.";
+    }
+
 
 }
