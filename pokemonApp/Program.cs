@@ -1,8 +1,31 @@
-﻿namespace pokemonApp;
+﻿using System.Text.Json;
+
+namespace pokemonApp;
 class Program
 {
     static void Main(string[] args)
     {
+
+        var bulbito = new Bulbasaur {
+            Classification = "Grass Pokemon",
+            Region = "Kanto"
+        
+        };
+// 1. Serialize
+        // string jsonString = JsonSerializer.Serialize(bulbito);
+        // Console.WriteLine(jsonString);
+// 2. File
+        string fileName = "Bulbasaur.json";
+        string jsonString = JsonSerializer.Serialize(bulbito);
+        File.WriteAllText(fileName, jsonString);
+
+        Console.WriteLine(File.ReadAllText(fileName));
+// 3. Deserialize
+Bulbasaur? bulbito2 =
+    JsonSerializer.Deserialize<Bulbasaur>(jsonString);
+
+    Console.WriteLine($"Classification: {bulbito2?.Classification}");
+    Console.WriteLine($"Region: {bulbito2?.Region}");
 
 
 

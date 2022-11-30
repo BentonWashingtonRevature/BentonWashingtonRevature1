@@ -7,6 +7,16 @@ class Bulbasaur : Pokemon {
 
     string[] moves = {"Tackle", "Vine Whip"};
 
+
+    public string? Classification { get; set; }
+    public string? Region { get; set; }
+
+
+
+
+
+
+
     public override void Sound(){
         Console.WriteLine("*bulbasaur noises*");
     }

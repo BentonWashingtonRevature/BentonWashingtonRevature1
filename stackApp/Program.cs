@@ -3,7 +3,7 @@ class Program
 {
     static void Main(string[] args)
     {
-//Create a trainer stack.
+//Stacks are first in-last out (or last in-first out)
         Stack<string> trainerStack = new Stack<string>();
         trainerStack.Push("Mark");
         trainerStack.Push("Jonathan");
