@@ -1,0 +1,22 @@
+public static void miniMaxSum(List<int> arr)
+    {
+        List<long> myLongArr = new List<long>();
+        
+        foreach(int x in arr){
+            myLongArr.Add(x);
+        }
+        //use C# methods to get the sum of the array and the minimum integer
+        long sum = myLongArr.Sum();
+        long minInt = myLongArr.Min();
+        
+        // then subtract the min to get the maxSum
+        long maxSum = sum - minInt;
+        
+        //NOW to get the minSum
+        long maxInt = myLongArr.Max();
+        
+        //then subtract the maximum integer to get the minimum sum
+        long minSum = sum-maxInt;
+        
+        Console.WriteLine($"{minSum} {maxSum}");
+    }
