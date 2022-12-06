@@ -1,0 +1,41 @@
+public static List<int> gradingStudents(List<int> grades)
+    {
+//initialize variables
+int roundGrade = 0;
+List <int> updatedGrades = new List <int> ();
+
+//take each grade and set to original grade
+        foreach (int grade in grades)
+        {
+int origGrade = grade;
+
+//take grade from array and find its next multiple of 5
+if (origGrade % 5 == 0 && origGrade > 37){
+    roundGrade = origGrade + 5;
+} else if ((origGrade+1) % 5 == 0 && origGrade > 37){
+    roundGrade = origGrade + 1;
+} else if ((origGrade+2) % 5 == 0 && origGrade > 37){
+    roundGrade = origGrade + 2;
+} else if ((origGrade+3) % 5 == 0 && origGrade > 37){
+    roundGrade = origGrade + 3;
+} else if ((origGrade+4) % 5 == 0 && origGrade > 37) {
+    roundGrade = origGrade + 4;
+} else {
+    roundGrade = origGrade;
+    }
+//find the difference between the next multiple of 5 and the number
+int diff = roundGrade - origGrade;
+//if the difference is less than 3, the rounded grade replaces the original grade
+// if not, keep original grade
+if (diff < 3){
+    updatedGrades.Add(roundGrade);
+
+} else {
+    updatedGrades.Add(origGrade);
+
+}
+        }   
+        //new array!!! This is a big win for me.
+    return updatedGrades;
+        
+    }
