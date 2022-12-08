@@ -1,0 +1,37 @@
+public static void countApplesAndOranges(int s, int t, int a, int b, List<int> apples, List<int> oranges)
+    {
+        //initialize variables needed to solve
+        int appleHouseSize = t - s;
+        int appleShortDistToHouse = s - a;
+        int appleLongDistToHouse = appleShortDistToHouse + appleHouseSize;
+        int numberOfApples = 0;
+        
+        int orangeHouseSize = s - t;
+        int orangeShortDistToHouse = t - b;
+        int orangeLongDistToHouse = orangeShortDistToHouse + orangeHouseSize;
+        int numberOfOranges = 0;
+        
+        //figure out how many apples there are
+        foreach (int apple in apples){
+            if (apple >= appleShortDistToHouse && apple <= appleLongDistToHouse){
+                numberOfApples += 1;
+            } else {
+                numberOfApples += 0; 
+                }
+        }
+        
+        //figure out how many oranges there are
+        foreach (int orange in oranges){
+            if (orange <= orangeShortDistToHouse && orange >= orangeLongDistToHouse){
+                numberOfOranges += 1;
+            } else {
+                numberOfOranges += 0;
+            }
+        }
+        //write number of each to console
+        Console.WriteLine(numberOfApples);
+        Console.WriteLine(numberOfOranges);
+        
+        
+        
+    }
