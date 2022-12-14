@@ -1,0 +1,44 @@
+public static int migratoryBirds(List<int> arr)
+    {
+        //initialize variables
+        int type1 = 0; 
+        int type2 = 0; 
+        int type3 = 0; 
+        int type4 = 0; 
+        int type5 = 0;
+        
+        //loop through array, condition for each possibility
+        foreach (var bird in arr)
+        {
+            switch (bird)
+            {
+                case 1:
+                    type1++;
+                     break;
+                case 2:
+                    type2++;
+                     break;
+                case 3:
+                    type3++;
+                     break;
+                case 4:
+                    type4++;
+                     break;
+                case 5:
+                    type5++;
+                     break;
+                default: 
+                continue;
+            }
+        }
+            //array of results
+            int[] birds = {type1, type2, type3, type4, type5};
+            //bird with most sightings plus 1
+            int mostBirds = birds.ToList().IndexOf(birds.Max()) + 1;
+            
+            return mostBirds;
+
+
+    }
+
+}
