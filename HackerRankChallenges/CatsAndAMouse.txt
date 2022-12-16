@@ -1,0 +1,17 @@
+static string catAndMouse(int x, int y, int z) {
+        
+        //find dist for first cat
+        int diff1 = x - z;
+        int dist1 = Math.Abs(diff1);
+        //find dist for second cat
+        int diff2 = y - z;
+        int dist2 = Math.Abs(diff2);
+        //compare
+        if (dist1 < dist2){
+            return "Cat A";
+        } else if (dist2 < dist1){
+            return "Cat B";
+        } else {
+            return "Mouse C";
+        }
+    }
