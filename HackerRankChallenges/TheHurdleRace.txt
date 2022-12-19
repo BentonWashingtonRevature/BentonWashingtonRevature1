@@ -1,0 +1,22 @@
+public static int hurdleRace(int k, List<int> height)
+    {
+        //initialize variable
+        int maxHeight = 0;
+        
+        //find max height in list
+        foreach(int hurdle in height)
+        {
+            if (hurdle > maxHeight){
+                maxHeight = hurdle;
+            }
+        }
+        //what to do with max height
+        //if less than k, return 0
+        //if more, return the difference
+        if (k > maxHeight){
+            return 0;
+        } else {
+            int diff = maxHeight - k;
+            return diff;
+        }
+    }
