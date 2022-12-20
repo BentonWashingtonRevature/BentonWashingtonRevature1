@@ -1,0 +1,19 @@
+public static int designerPdfViewer(List<int> h, string word)
+    {
+        //find how many characters there are in the word
+        int len = word.Length;
+        
+        //setup max height of any characters to be 0
+        int maxHeight = 0;
+        
+        //loop through characters and determine which one has the max height (using ascii code)
+        for(int i = 0; i < len; i++){
+            int charHeight = word[i] - 97;
+            if (h[charHeight] > maxHeight){
+                maxHeight=h[charHeight];
+            }
+        }
+   
+        //done with loop. multiply values to get answer.
+        return maxHeight * len;
+    }
